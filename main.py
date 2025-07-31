@@ -23,7 +23,8 @@ if __name__ == "__main__":
     s.extend(list(s3))
     s.extend(list(s4))
     random.shuffle(s)
-    passwd = ("".join(random.choices(s,  plen)))
+    passwd = ("".join(random.choices(s,  k=plen)))
     print("Your Password is: %s" %(passwd))
     pyperclip.copy(passwd)
     print("And it has been copied to your clipboard.")
+    
